@@ -1,0 +1,27 @@
+{% extends 'portofolio/base.html' %}
+
+{% block content %}
+
+<h1>Adhi's Personal Portofolio</h1>
+
+{% load static %}
+
+<img src="{% static 'portofolio/wallhaven.jpg' %}">
+
+<a href="{% static 'portofolio/July.pdf' %}">Pay Slip</a> <br>
+<a href="{% url 'blog:all_blogs' %}">Blog</a>
+
+{% for p in projects %}
+
+<h2>{{ p }}</h2>
+Title : {{ p.title }} <br>
+Description : {{ p.description }} <br>
+<img src="{{ p.image.url }}"> <br>
+
+{% if p.url %}
+<a href="{{ p.url }}">Link</a>
+{% endif %}
+
+{% endfor %}
+
+{% endblock %}
