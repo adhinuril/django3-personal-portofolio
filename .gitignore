@@ -5,3 +5,4 @@
 __pycache__/
 /static/
 personal_porto/settings.py
+/personal_porto/settings.py
