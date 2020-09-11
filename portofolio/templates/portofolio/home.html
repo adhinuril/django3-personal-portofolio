@@ -2,11 +2,9 @@
 
 {% block content %}
 
-<h1>Adhi's Personal Portofolio</h1>
+<h1>Adhi's Personal Portofolio who live in anywehere in the world</h1>
 
 {% load static %}
-
-<img src="{% static 'portofolio/wallhaven.jpg' %}">
 
 <a href="{% static 'portofolio/July.pdf' %}">Pay Slip</a> <br>
 <a href="{% url 'blog:all_blogs' %}">Blog</a>
@@ -21,6 +19,8 @@ Description : {{ p.description }} <br>
 {% if p.url %}
 <a href="{{ p.url }}">Link</a>
 {% endif %}
+
+<img src="{% static 'portofolio/wallhaven.jpg' %}">
 
 {% endfor %}
 
