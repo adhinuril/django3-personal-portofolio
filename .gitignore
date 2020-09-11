@@ -4,5 +4,4 @@
 *.pyc
 __pycache__/
 /static/
-personal_porto/settings.py
-/personal_porto/settings.py
+local_settings.py
